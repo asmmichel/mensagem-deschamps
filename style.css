@@ -1,0 +1,29 @@
+body {
+  background-color: #35363A;
+  color: white;
+}
+
+.div-troca-de-texto {
+  position: relative;
+}
+
+.cursor {
+  position: absolute;
+  background-color: white;
+  display: inline-block;
+  width: 0.1em;
+  height: 1em;
+}
+
+.cursor.piscando {
+  animation: piscar 0.9s infinite;
+}
+
+@keyframes piscar {
+  50% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
