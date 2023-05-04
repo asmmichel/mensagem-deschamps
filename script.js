@@ -15,9 +15,9 @@ function escreverPalavra() {
       escreverPalavra();
     } else {
       cursor.classList.add(piscando);
-      setTimeout(apagarPalavra, 1500);
+      setTimeout(apagarPalavra, mandarDigitacaoVariada(500,3000));
     }
-  }, 60);
+  }, mandarDigitacaoVariada(20,90));
 }
 
 function apagarPalavra() {
@@ -32,10 +32,16 @@ function apagarPalavra() {
       i++
       if(i >= arrayDasPalavras.length) i = 0;
       cursor.classList.add(piscando);
-      setTimeout(escreverPalavra, 750);
+      setTimeout(escreverPalavra, mandarDigitacaoVariada(500,3000));
     }
-  }, 60);
+  }, mandarDigitacaoVariada(20,90));
+}
+
+
+function mandarDigitacaoVariada(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 cursor.classList.add(piscando);
 escreverPalavra();
+

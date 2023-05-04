@@ -1,6 +1,14 @@
 body {
   background-color: #35363A;
   color: white;
+  font-size: 2em;
+}
+
+.container {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .div-troca-de-texto {
